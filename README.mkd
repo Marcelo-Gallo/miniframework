@@ -1,9 +1,9 @@
 ## Padrão MVC
--Padrão de arquitetura utilizado para organizar as aplicações.
--Dividido entre Models, Views e Controllers.
+- Padrão de arquitetura utilizado para organizar as aplicações.
+- Dividido entre Models, Views e Controllers.
 
 ## php
--Configurar o PATH do php nas variaveis de ambiente do usuário, fazendo com que os comandos php sejam habilitados.
+- Configurar o PATH do php nas variaveis de ambiente do usuário, fazendo com que os comandos php sejam habilitados.
 
 ## Composer
 - Gerenciador de dependencias.
@@ -20,9 +20,9 @@
 ->fiz pela linha de comando, no diretório raiz do projeto e configurei para o mesmo.
 
 # Copia o composer:
-''' shell
+´´´ shell
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-'''
+´´´
 
 # Verifica a instalação:
 '''shell
