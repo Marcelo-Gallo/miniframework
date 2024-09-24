@@ -20,7 +20,7 @@
 ->fiz pela linha de comando, no diretório raiz do projeto e configurei para o mesmo.
 
 ### Copia o composer:
-´´´shell
+´´´
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 ´´´
 
