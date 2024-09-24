@@ -20,27 +20,28 @@
 ->fiz pela linha de comando, no diretório raiz do projeto e configurei para o mesmo.
 
 ### Copia o composer:
-´´´shell
+```shell
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+```
 
 ### Verifica a instalação:
-'''shell
+```shell
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-'''
+```
 
 - Caso a instalação sofresse algum problema, teria sido automaticamente removida e seria necessário executar o comando de cópia novamente. Note as mensagens "echo 'Installer verified';" e echo 'Installer corrupt'; unlink('composer-setup.php');"
 
 ### Executa o script de setup do composer:
-'''shell
+```shell
 php composer-setup.php
-'''
+```
 
 ### As funcionalidades do composer agora podem ser utilizadas pelo comando:
-'''shell
+```shell
 php composer.phar
-'''
+```
 
 ### O "composer-setup.php" já pode ser removido pois não é mais necessário:
-'''shell
+```shell
 php -r "unlink('composer-setup.php');"
-'''
+```
