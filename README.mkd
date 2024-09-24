@@ -1,47 +1,50 @@
+
 # Padrão MVC
-- Padrão de arquitetura utilizado para organizar as aplicações.
-- Dividido entre Models, Views e Controllers.
+O padrão MVC (Model-View-Controller) é uma arquitetura utilizada para organizar aplicações de forma modular e escalável. Ele é dividido em três componentes principais:
+- **Models**: Responsáveis pela lógica de dados e regras de negócio.
+- **Views**: Encapsulam a apresentação e a interface do usuário.
+- **Controllers**: Intermediam a interação entre Models e Views, controlando o fluxo da aplicação.
 
-### php
-- Configurar o PATH do php nas variaveis de ambiente do usuário, fazendo com que os comandos php sejam habilitados.
+## PHP
+Para utilizar o PHP de forma eficiente, é necessário configurá-lo no PATH das variáveis de ambiente do usuário. Isso permite que os comandos do PHP sejam acessíveis globalmente no sistema.
 
-# Composer
-- Gerenciador de dependencias.
-- Traz pacotes externos para a estrutura do projeto de forma simplificada.
-- Implementa um sistema de autoload, ou seja, facilita o carregamento (load) de todos os scripts da aplicação.
-- É utilizada especificação PSR-4.
-- Não é mais necessário fazer um monte de requires a todo momento.
-- Para utilizar uma classe, agora, é só utilziar o namespace gerado pelo composer.
+## Composer
+O Composer é um gerenciador de dependências para PHP que facilita a inclusão de pacotes externos na estrutura do projeto. Ele oferece um sistema de autoload (PSR-4) que simplifica o carregamento de scripts, eliminando a necessidade de múltiplos `require`.
 
-### Trazendo o composer para um projeto:
-->https://getcomposer.org
-->clicar em download
-->Escolher entre executável ou linha de comando e seguir o passo a passo.
-->fiz pela linha de comando, no diretório raiz do projeto e configurei para o mesmo.
+### Principais vantagens:
+- Simplificação na inclusão de pacotes externos.
+- Autoload automático das classes através do namespace gerado pelo Composer.
 
-### Copia o composer:
-```shell
+### Como instalar o Composer:
+
+1. Acesse [getcomposer.org](https://getcomposer.org) e clique em **Download**.
+2. Escolha entre o instalador executável ou a instalação via linha de comando e siga os passos indicados.
+3. Para instalação via linha de comando no diretório raiz do projeto, siga os comandos abaixo:
+
+#### Copiar o instalador do Composer:
+\`\`\`shell
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-```
+\`\`\`
 
-### Verifica a instalação:
-```shell
+#### Verificar a integridade do instalador:
+\`\`\`shell
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-```
+\`\`\`
+> **Nota:** Caso a verificação falhe, o instalador será removido automaticamente e será necessário executar o comando de cópia novamente.
 
-- Caso a instalação sofresse algum problema, teria sido automaticamente removida e seria necessário executar o comando de cópia novamente. Note as mensagens "echo 'Installer verified';" e echo 'Installer corrupt'; unlink('composer-setup.php');"
-
-### Executa o script de setup do composer:
-```shell
+#### Executar o script de instalação do Composer:
+\`\`\`shell
 php composer-setup.php
-```
+\`\`\`
 
-### As funcionalidades do composer agora podem ser utilizadas pelo comando:
-```shell
+#### Utilizar as funcionalidades do Composer:
+\`\`\`shell
 php composer.phar
-```
+\`\`\`
 
-### O "composer-setup.php" já pode ser removido pois não é mais necessário:
-```shell
+#### Remover o instalador do Composer:
+\`\`\`shell
 php -r "unlink('composer-setup.php');"
-```
+\`\`\`
+
+Com esses passos, o Composer estará configurado e pronto para ser utilizado em seu projeto, simplificando a gestão de dependências e o autoload das classes.
