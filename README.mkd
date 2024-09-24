@@ -22,29 +22,29 @@ O Composer é um gerenciador de dependências para PHP que facilita a inclusão 
 3. Para instalação via linha de comando no diretório raiz do projeto, siga os comandos abaixo:
 
 #### Copiar o instalador do Composer:
-\`\`\`shell
+```shell
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-\`\`\`
+```
 
 #### Verificar a integridade do instalador:
-\`\`\`shell
+```shell
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-\`\`\`
+```
 > **Nota:** Caso a verificação falhe, o instalador será removido automaticamente e será necessário executar o comando de cópia novamente.
 
 #### Executar o script de instalação do Composer:
-\`\`\`shell
+```shell
 php composer-setup.php
-\`\`\`
+```
 
 #### Utilizar as funcionalidades do Composer:
-\`\`\`shell
+```shell
 php composer.phar
-\`\`\`
+```
 
 #### Remover o instalador do Composer:
-\`\`\`shell
+```shell
 php -r "unlink('composer-setup.php');"
-\`\`\`
+```
 
 Com esses passos, o Composer estará configurado e pronto para ser utilizado em seu projeto, simplificando a gestão de dependências e o autoload das classes.
