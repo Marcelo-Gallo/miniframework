@@ -22,7 +22,6 @@
 ### Copia o composer:
 ´´´shell
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-´´´
 
 ### Verifica a instalação:
 '''shell
