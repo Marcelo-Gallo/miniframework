@@ -1,0 +1,47 @@
+##Padrão MVC
+-Padrão de arquitetura utilizado para organizar as aplicações.
+-Dividido entre Models, Views e Controllers.
+
+##php
+-Configurar o PATH do php nas variaveis de ambiente do usuário, fazendo com que os comandos php sejam habilitados.
+
+##Composer
+-Gerenciador de dependencias.
+-Traz pacotes externos para a estrutura do projeto de forma simplificada.
+-Implementa um sistema de autoload, ou seja, facilita o carregamento (load) de todos os scripts da aplicação.
+-É utilizada especificação PSR-4.
+-Não é mais necessário fazer um monte de requires a todo momento.
+-Para utilizar uma classe, agora, é só utilziar o namespace gerado pelo composer.
+
+#trazendo o composer para um projeto:
+->https://getcomposer.org
+->clicar em download
+->Escolher entre executável ou linha de comando e seguir o passo a passo.
+->fiz pela linha de comando, no diretório raiz do projeto e configurei para o mesmo.
+
+#copia o composer:
+'''shell
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+'''
+
+#verifica a instalação:
+'''shell
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+'''
+
+-Caso a instalação sofresse algum problema, teria sido automaticamente removida e seria necessário executar o comando de cópia novamente. Note as mensagens "echo 'Installer verified';" e echo 'Installer corrupt'; unlink('composer-setup.php');"
+
+#Executa o script de setup do composer:
+'''shell
+php composer-setup.php
+'''
+
+#As funcionalidades do composer agora podem ser utilizadas pelo comando:
+'''shell
+php composer.phar
+'''
+
+#O "composer-setup.php" já pode ser removido pois não é mais necessário:
+'''shell
+php -r "unlink('composer-setup.php');"
+'''
