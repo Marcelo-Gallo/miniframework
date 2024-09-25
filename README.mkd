@@ -13,7 +13,7 @@ php -S localhost:'porta'
 ```
 Entre as portas, pode ser 8080, 8888... A depender da sua demanda.
 
-Para finalizar o servidor, no CMD tecle "ctrl + C".
+Para finalizar o servidor, no CMD, tecle "ctrl + C".
 
 ## Composer
 O Composer é um gerenciador de dependências para PHP que facilita a inclusão de pacotes externos na estrutura do projeto. Ele oferece um sistema de autoload (PSR-4) que simplifica o carregamento de scripts, eliminando a necessidade de múltiplos `require`.
