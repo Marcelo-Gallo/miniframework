@@ -7,6 +7,13 @@ O padrão MVC (Model-View-Controller) é uma arquitetura utilizada para organiza
 
 ## PHP
 Para utilizar o PHP de forma eficiente, é necessário configurá-lo no PATH das variáveis de ambiente do usuário. Isso permite que os comandos do PHP sejam acessíveis globalmente no sistema.
+No CMD o servidor é iniciado com:
+```shell
+php -S localhost:'porta'
+```
+Entre as portas, pode ser 8080, 8888... A depender da sua demanda.
+
+Para finalizar o servidor, no CMD tecle "ctrl + C".
 
 ## Composer
 O Composer é um gerenciador de dependências para PHP que facilita a inclusão de pacotes externos na estrutura do projeto. Ele oferece um sistema de autoload (PSR-4) que simplifica o carregamento de scripts, eliminando a necessidade de múltiplos `require`.
