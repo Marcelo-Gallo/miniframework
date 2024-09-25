@@ -15,7 +15,7 @@ O Composer é um gerenciador de dependências para PHP que facilita a inclusão 
 - Simplificação na inclusão de pacotes externos.
 - Autoload automático das classes através do namespace gerado pelo Composer.
 
-### Como instalar o Composer:
+### Como baixar o Composer:
 
 1. Acesse [getcomposer.org](https://getcomposer.org) e clique em **Download**.
 2. Escolha entre o instalador executável ou a instalação via linha de comando e siga os passos indicados.
@@ -47,4 +47,32 @@ php composer.phar
 php -r "unlink('composer-setup.php');"
 ```
 
-Com esses passos, o Composer estará configurado e pronto para ser utilizado em seu projeto, simplificando a gestão de dependências e o autoload das classes.
+Com esses passos, o Composer estará baixado e pronto para ser instalado.
+
+### Instalando o composer:
+- Crie um arquivo "composer.json" no diretório raiz do projeto. Este arquivo armazenará as informações que serão base para a instalação do composer.
+Algo assim deve ser criado:
+```JSON
+{
+    "name": "meu-vendor/nome dele",
+    "require": {
+        "php": ">= 7.0"
+    },
+    "authors": [ //pode ter mais de um objeto
+        {//começo do objeto
+            "name": "Seu Nome",
+            "email": "seu@email.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { //Namespaces
+            "App\\": "App/",
+            "MF\\": "vendor/MF/"
+        }
+    }
+}
+//ressaltando, suas necessidades são os parametros para este arquivo. Este é só um exemplo simples
+```
+
+### Boas práticas
+- Agora que você sabe como criar e configurar o composer, não é necessário subir a pasta vendor para o github já que esta pode ser facilmente recriada. Estou subindo apenas com fins de exemplificação mas, por ser muito grande, pode tornar seu repositório lento em aplicações maiores.
