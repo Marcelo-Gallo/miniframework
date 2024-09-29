@@ -1,0 +1,27 @@
+# Composer
+/vendor/
+
+# Configuração do ambiente
+.env
+.env.local
+.env.*.local
+
+# Diretório de log
+/logs
+*.log
+
+# Diretórios de cache do sistema
+/tmp
+/cache
+
+# Arquivos de configuração
+config.php
+
+# Chaves privadas
+*.key
+*.pem
+
+# Arquivos de banco de dados
+*.sql
+*.sqlite
+*.sqlite3

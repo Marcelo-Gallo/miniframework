@@ -1,3 +1,7 @@
+# 🚧 Work in Progress 🚧
+
+Este repositório ainda está em desenvolvimento! 🎉 Por favor, esteja ciente de que funcionalidades estão sendo adicionadas e melhoradas constantemente. ⚙️💻 Sinta-se à vontade para explorar, mas note que algumas partes podem não estar completamente finalizadas. 📈✨
+
 
 # Padrão MVC
 O padrão MVC (Model-View-Controller) é uma arquitetura utilizada para organizar aplicações de forma modular e escalável. Ele é dividido em três componentes principais:
@@ -83,3 +87,8 @@ Algo assim deve ser criado:
 
 ### Boas práticas
 - Agora que você sabe como criar e configurar o composer, não é necessário subir a pasta vendor para o github já que esta pode ser facilmente recriada. Estou subindo apenas com fins de exemplificação mas, por ser muito grande, pode tornar seu repositório lento em aplicações maiores.
+
+## Route
+- Não está diretamente ligado ao padrão MVC, ele funciona como uma camada adicional da aplicação que funciona como um intermédio entre a requisição HTTP e a lógica da aplicação (controllers). Embora não faça parte dos principais componentes do padrão MVC, é crucial para a operação em aplicações web, direcionando corretamente as requisições.
+- Faz parte da estrutura, atua como suporte para a arquitetura MVC.
+- No caso deste respositório, o script public/index.php é quem recebe as requisições do client. Este script também inicia o autoload do composer, fazendo o carregamento de todas as classes que estão dentro do projeto.
