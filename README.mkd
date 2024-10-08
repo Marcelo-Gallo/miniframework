@@ -95,3 +95,39 @@ Algo assim deve ser criado:
 - Receber as requisições HTTP do cliente, que são direcionadas para este script através da configuração do servidor web (como ````.htaccess``` no Apache).
 - Iniciar o autoload do Composer, carregando automáticamente todas as classes necessárias, configuradas no ```composer.json```, tornando mais simples o gerenciamento de dependências e carregamento de classes.
 - Por fim, define e manipula as rotas, direcionando as requisições para o controlador correto com o método apropriado com base na URL.
+- A especificação PSR4 espera que o script contido dentro de um determinado diretorio esteja em um namespace compativel com aquele respectivo diretório.
+- Função getUrl criada para pegar a url relativa ao path, formatada e sem o formato de array:
+```PHP
+public function getUrl(){
+            return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        }
+```
+- Função initRoutes() é responsável por montar o array que fará toda a amarração das rotas da aplicação. Em resumo, designa qual o a rota, o controller a ser chamado e sua respectiva action:
+```PHP
+public function initRoutes() {
+            $routes['home'] = array(
+                'route' => '/', //indice route que recebe a rota raiz
+                'controller' => 'indexController', //qual o controller dessa rota
+                'action' => 'index' //ação que será disparada dentro do controlador quando essa rota for requisitada
+            );
+
+            $routes['sobre_nos'] = array(
+                'route' => '/sobre_nos',
+                'controller' => 'indexController',
+                'action' => 'sobreNos'
+            );
+        }
+```
+
+## Utilitários
+### Inclusos na função getUrl:
+- Superglobal $_SERVER -> Array retorna todos os detalhes do servidor da aplicação.
+- Função parse_url -> Recebe uma URL, interpreta e retorna os componentes
+- Constante PHP_URL_PATH -> faz com que o retorno seja apenas a String relativa ao path.
+
+
+## .htacces
+- Arquivo de parametrização do apache. É nele que serão definidos alguns parametros que serão configurados na hora de subir o serviço apache.
+
+## Anotações
+- Uma URL não é composta apenas pelo path, ela possui diversos aspectos. Por exemplo, é possivel receber parametros pela URL e separá-los do path.

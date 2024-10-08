@@ -2,8 +2,11 @@
     //Index.php é o entry point da aplicação, então aqui deve ser feito o require do autoload.
     require_once "../vendor/autoload.php";
     
-    echo 'Miniframework rodando na porta 8080';
-    echo '<br>';
-    echo '(php -S localhost:8080) -> comando que inicializa o servidor na porta 8080 da rede.'
+    $route = new \App\Route;
+    echo 'Isso ta funcionando <br>';
+    echo '<hr>';
+    echo '<pre>';
+    print_r($route->getUrl()); 
+    echo '</pre>';
 
 ?>
