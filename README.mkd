@@ -63,6 +63,7 @@ Com esses passos, o Composer estará baixado e pronto para ser instalado.
 ### Instalando o composer:
 - Crie um arquivo "composer.json" no diretório raiz do projeto. Este arquivo armazenará as informações que serão base para a instalação do composer.
 Algo assim deve ser criado:
+> Lembre-se: Remova os "comentários" em vermelho
 ```JSON
 {
     "name": "meu-vendor/nome dele",
