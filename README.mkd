@@ -70,7 +70,7 @@ Algo assim deve ser criado:
         "php": ">= 7.0"
     },
     "authors": [ //pode ter mais de um objeto
-        {//começo do objeto
+        { //começo do objeto
             "name": "Seu Nome",
             "email": "seu@email.com"
         }

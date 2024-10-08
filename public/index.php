@@ -9,4 +9,3 @@
     print_r($route->getUrl()); 
     echo '</pre>';
 
-?>
