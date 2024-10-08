@@ -92,7 +92,7 @@ Algo assim deve ser criado:
 - Não está diretamente ligado ao padrão MVC, ele funciona como uma camada adicional da aplicação que funciona como um intermédio entre a requisição HTTP e a lógica da aplicação (controllers). Embora não faça parte dos principais componentes do padrão MVC, é crucial para a operação em aplicações web, direcionando corretamente as requisições.
 - As rotas são parte da infraestrutura que suporta a arquitetura MVC. Garantindo que a lógica de roteamento esteja separada da lógica de controle, da lógica de negócios (models) e da lógica de apresentação (views).
 - Na grande parte das arquiteturas MVC modernas, o ponto de entrada da aplicação web é um script localizado no diretório ```public```, normalmente chamado de ```index.php```, sendo responsável por:
-- Receber as requisições HTTP do cliente, que são direcionadas para este script através da configuração do servidor web (como ````.htaccess``` no Apache).
+- Receber as requisições HTTP do cliente, que são direcionadas para este script através da configuração do servidor web (como ```.htaccess``` no Apache).
 - Iniciar o autoload do Composer, carregando automáticamente todas as classes necessárias, configuradas no ```composer.json```, tornando mais simples o gerenciamento de dependências e carregamento de classes.
 - Por fim, define e manipula as rotas, direcionando as requisições para o controlador correto com o método apropriado com base na URL.
 - A especificação PSR4 espera que o script contido dentro de um determinado diretorio esteja em um namespace compativel com aquele respectivo diretório.
