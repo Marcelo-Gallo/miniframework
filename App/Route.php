@@ -1,10 +1,10 @@
 <?php
 
     namespace App;
+    use MF\Init\Bootstrap;
+    class Route extends Bootstrap{
 
-    class Route {
-
-        public function initRoutes() {
+        protected function initRoutes() {
             $routes['home'] = array(
                 'route' => '/', //indice route que recebe a rota raiz
                 'controller' => 'indexController', //qual o controller dessa rota
@@ -16,9 +16,8 @@
                 'controller' => 'indexController',
                 'action' => 'sobreNos'
             );
+
+            $this->setRoutes($routes);
         }
 
-        public function getUrl(){
-            return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-        }
     }
